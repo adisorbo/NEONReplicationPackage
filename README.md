@@ -1,6 +1,4 @@
-# NEON_Replication_Package
-
-Replication Package for the paper entitled "Exploiting Natural Language Structures in Software Informal Documentation"
+# Replication Package for the paper entitled "Exploiting Natural Language Structures in Software Informal Documentation"
 
 Description of the content of folder "NEON_replication_package":
 1) the folder "RQ1" contains:
