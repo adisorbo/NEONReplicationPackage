@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<heuristics>
+
+<!-- id = 1 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj</type>
+<text>To have [something].</text>
+<conditions>
+<condition>aux.governor="have"</condition>
+<condition>aux.dependent="to"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 2 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/xcomp</type>
+<text>We need to [verb]</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.dependent="we"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 3 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/xcomp</type>
+<text>[something] needs to [verb]</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 5 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/xcomp</type>
+<text>I would like to [verb]</text>
+<conditions>
+<condition>nsubj.governor="like"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="would"</condition>
+<condition>aux.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 6 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/dobj</type>
+<text>[something] could have [something].</text>
+<conditions>
+<condition>nsubj.governor="have"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="could"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 7 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj/xcomp</type>
+<text>[something] needs [something] to [verb]</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 9 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/nsubj/dobj</type>
+<text>[something] must offer api.</text>
+<conditions>
+<condition>aux.governor="offer"</condition>
+<condition>aux.dependent="must"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.dependent="apus"</condition>
+<condition>dobj.governor="offer"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 10 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/xcomp</type>
+<text>[something] needs to [verb]</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.dependent=nsubj.governor</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 12 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubjpass/auxpass</type>
+<text>[something] is needed/required.</text>
+<conditions>
+<condition>nsubjpass.governor="require need"</condition>
+<condition>nsubjpass.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 13 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/dobj</type>
+<text>[something] must offer api.</text>
+<conditions>
+<condition>nsubj.governor="offer"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="must"</condition>
+<condition>aux.governor=dobj.governor</condition>
+<condition>dobj.dependent="apus"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 15 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>xcomp/nsubj</type>
+<text>We need to [verb]</text>
+<conditions>
+<condition>xcomp.governor="need"</condition>
+<condition>xcomp.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="we"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 18 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/ccomp</type>
+<text>To have to [verb].</text>
+<conditions>
+<condition>aux.governor="have"</condition>
+<condition>aux.dependent="to"</condition>
+<condition>aux.governor=ccomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 19 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj/ccomp</type>
+<text>[auxiliary] have [something] to [verb]</text>
+<conditions>
+<condition>aux.governor="have"</condition>
+<condition>aux.governor=dobj.governor</condition>
+<condition>dobj.governor=ccomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 20 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj/ccomp</type>
+<text>[something] has [something] to [verb].</text>
+<conditions>
+<condition>nsubj.governor="have"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.governor=ccomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 22 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux</type>
+<text>We should state.</text>
+<conditions>
+<condition>nsubj.governor="state"</condition>
+<condition>nsubj.dependent="we"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="should"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 23 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj</type>
+<text>[something] requires/needs.</text>
+<conditions>
+<condition>nsubj.governor="need require"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 24 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/xcomp/aux/auxpass</type>
+<text>[something] needs to be done.</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+<condition>xcomp.dependent="do"</condition>
+<condition>xcomp.dependent=aux.governor</condition>
+<condition>aux.dependent="to"</condition>
+<condition>aux.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 25 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubjpass/auxpass</type>
+<text>[something] is needed/required</text>
+<conditions>
+<condition>nsubjpass.governor="require need"</condition>
+<condition>nsubjpass.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 26 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/dobj/nsubj</type>
+<text>[something] [auxiliary] provide [something].</text>
+<conditions>
+<condition>nsubj.governor="provide"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=dobj.governor</condition>
+<condition>dobj.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 27 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj</type>
+<text>[auxiliary] offer api.</text>
+<conditions>
+<condition>aux.governor="offer"</condition>
+<condition>aux.governor=dobj.governor</condition>
+<condition>dobj.dependent="apus"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 29 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj/aux</type>
+<text>To have [something].</text>
+<conditions>
+<condition>dobj.governor="have"</condition>
+<condition>dobj.governor=aux.governor</condition>
+<condition>aux.dependent="to"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 30 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj</type>
+<text>We need [something].</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.dependent="we"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 34 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/ccomp/aux/nsubj</type>
+<text>I think that [something] [auxiliary] [verb]</text>
+<conditions>
+<condition>nsubj.governor="think"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=ccomp.governor</condition>
+<condition>ccomp.dependent=aux.governor</condition>
+<condition>aux.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 35 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/dobj</type>
+<text>We should have [something].</text>
+<conditions>
+<condition>nsubj.governor="have"</condition>
+<condition>nsubj.dependent="we"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="should"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 38 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>prep_in/nsubj/ccomp</type>
+<text>In [something] I think that [verb].</text>
+<conditions>
+<condition>prep_in.governor="think"</condition>
+<condition>prep_in.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=ccomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 39 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj</type>
+<text>[something] needs [something].</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 40 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux</type>
+<text>[something] [auxiliary] need/require.</text>
+<conditions>
+<condition>aux.governor="require need"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 42 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/nsubj</type>
+<text>[something] should provide.</text>
+<conditions>
+<condition>aux.governor="provide"</condition>
+<condition>aux.dependent="should"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 44 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/dobj</type>
+<text>You [auxiliary] add [something].</text>
+<conditions>
+<condition>nsubj.governor="add"</condition>
+<condition>nsubj.dependent="you"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 46 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj/aux</type>
+<text>[something] [auxiliary] include [something]</text>
+<conditions>
+<condition>dobj.governor="include"</condition>
+<condition>dobj.governor=aux.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 47 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/auxpass</type>
+<text>[something] [auxiliary] be made/done.</text>
+<conditions>
+<condition>aux.governor="make do"</condition>
+<condition>aux.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 50 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj/nsubj</type>
+<text>[something] needs [something].</text>
+<conditions>
+<condition>dobj.governor="need"</condition>
+<condition>dobj.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 51 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>xcomp/nsubj</type>
+<text>[something] needs to [verb].</text>
+<conditions>
+<condition>xcomp.governor="need"</condition>
+<condition>xcomp.governor=nsubj.governor</condition>
+<condition>nsubj.dependent=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 52 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj</type>
+<text>[something] require/needs [something].</text>
+<conditions>
+<condition>nsubj.governor="require need"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 53 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>neg</type>
+<text>[something] not need</text>
+<conditions>
+<condition>neg.governor="need"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 54 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/ccomp/aux/nsubj/ccomp</type>
+<text>[something] would mean that [something] [auxiliary] [verb]</text>
+<conditions>
+<condition>nsubj.governor="mean"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="would"</condition>
+<condition>aux.governor=ccomp.governor</condition>
+<condition>ccomp.governor=aux.governor</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.governor=ccomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 55 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/xcomp</type>
+<text>[auxiliary] use to [verb].</text>
+<conditions>
+<condition>aux.governor="use"</condition>
+<condition>aux.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 58 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>xcomp/nsubj/dobj</type>
+<text>[something] needs [something] to [verb]</text>
+<conditions>
+<condition>xcomp.governor="need"</condition>
+<condition>xcomp.governor=nsubj.governor</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 59 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj</type>
+<text>[something] needs/requires [something]</text>
+<conditions>
+<condition>nsubj.governor="require need"</condition>
+<condition>nsubj.dependent=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 61 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/dobj</type>
+<text>Backend could offer [something].</text>
+<conditions>
+<condition>nsubj.governor="offer"</condition>
+<condition>nsubj.dependent="backend"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="could"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 64 -->
+<NLP_heuristic>
+<sentence type="all"/>
+<type>nsubj/aux/dobj</type>
+<text>We could add [something].</text>
+<conditions>
+<condition>nsubj.governor="add"</condition>
+<condition>nsubj.dependent="we"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="could"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 66 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj</type>
+<text>[something] [auxiliary] hold [something].</text>
+<conditions>
+<condition>aux.governor="keep hold"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 67 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux</type>
+<text>[something] should keep.</text>
+<conditions>
+<condition>aux.governor="keep"</condition>
+<condition>aux.dependent="should"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 68 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/nsubjpass/auxpass/aux</type>
+<text>[something] should be fixed.</text>
+<conditions>
+<condition>aux.governor="fix"</condition>
+<condition>aux.dependent="should"</condition>
+<condition>aux.governor=nsubjpass.governor</condition>
+<condition>nsubjpass.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+<condition>auxpass.governor=aux.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 70 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj</type>
+<text>To generate [something].</text>
+<conditions>
+<condition>aux.governor="generate"</condition>
+<condition>aux.dependent="to"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 71 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/nsubj</type>
+<text>backend could offer</text>
+<conditions>
+<condition>aux.governor="offer"</condition>
+<condition>aux.dependent="could"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="backend"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 73 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux</type>
+<text>[something] can make/do.</text>
+<conditions>
+<condition>aux.governor="make do"</condition>
+<condition>aux.dependent="can"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 74 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/nsubj</type>
+<text>we [auxiliary] define</text>
+<conditions>
+<condition>aux.governor="define"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="we"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 75 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/ccomp/nsubj/xcomp</type>
+<text>I think that we [verb]</text>
+<conditions>
+<condition>nsubj.governor="think"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=ccomp.governor</condition>
+<condition>ccomp.dependent=nsubj.governor</condition>
+<condition>nsubj.dependent="we"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 76 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj</type>
+<text>[something] [auxiliary] include [something].</text>
+<conditions>
+<condition>aux.governor="include"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 78 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj</type>
+<text>[something] needs/requires [something].</text>
+<conditions>
+<condition>nsubj.governor="require need"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 79 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/ccomp</type>
+<text>[something] requires to [verb]</text>
+<conditions>
+<condition>nsubj.governor="need require"</condition>
+<condition>nsubj.governor=ccomp.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 80 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/auxpass/aux</type>
+<text>[something] should be fixed.</text>
+<conditions>
+<condition>aux.governor="fix"</condition>
+<condition>aux.dependent="should"</condition>
+<condition>aux.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+<condition>auxpass.governor=aux.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 81 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubjpass/aux/auxpass</type>
+<text>[something] should be reviewed.</text>
+<conditions>
+<condition>nsubjpass.governor="review"</condition>
+<condition>nsubjpass.governor=aux.governor</condition>
+<condition>aux.dependent="should"</condition>
+<condition>aux.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 82 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/dobj/nsubj</type>
+<text>[something] [auxiliary] offer api.</text>
+<conditions>
+<condition>nsubj.governor="offer"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=dobj.governor</condition>
+<condition>dobj.dependent="apus"</condition>
+<condition>dobj.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 84 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubjpass/aux/auxpass</type>
+<text>[something] should be supported.</text>
+<conditions>
+<condition>nsubjpass.governor="support"</condition>
+<condition>nsubjpass.governor=aux.governor</condition>
+<condition>aux.dependent="should"</condition>
+<condition>aux.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 86 -->
+<NLP_heuristic>
+<sentence type="all"/>
+<type>nsubj/aux/dobj</type>
+<text>We [auxiliary] fix [something].</text>
+<conditions>
+<condition>nsubj.governor="fix"</condition>
+<condition>nsubj.dependent="we"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 87 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj</type>
+<text>[something] adds flag/signal.</text>
+<conditions>
+<condition>dobj.governor="add"</condition>
+<condition>dobj.dependent="signal flag"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 88 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj/nsubj</type>
+<text>we need [something].</text>
+<conditions>
+<condition>dobj.governor="need"</condition>
+<condition>dobj.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="we"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 89 -->
+<NLP_heuristic>
+<sentence type="all"/>
+<type>aux/nsubj/dobj</type>
+<text>[something] could add [something].</text>
+<conditions>
+<condition>aux.governor="add"</condition>
+<condition>aux.dependent="could"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 90 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj</type>
+<text>[something] provides [something].</text>
+<conditions>
+<condition>dobj.governor="provide"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 91 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/nsubj</type>
+<text>[something] should provide.</text>
+<conditions>
+<condition>nsubj.governor="provide"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="should"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 92 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux</type>
+<text>[something] should support.</text>
+<conditions>
+<condition>aux.governor="support"</condition>
+<condition>aux.dependent="should"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 93 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/neg/dobj</type>
+<text>[something] [auxiliary] not have [something].</text>
+<conditions>
+<condition>nsubj.governor="have"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 94 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj/nsubj</type>
+<text>[something] needs/requires [something].</text>
+<conditions>
+<condition>dobj.governor="require need"</condition>
+<condition>dobj.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 95 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj</type>
+<text>[auxiliary] add [something].</text>
+<conditions>
+<condition>aux.governor="add"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 97 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/xcomp/nsubj</type>
+<text>[something] needs to [verb].</text>
+<conditions>
+<condition>nsubj.governor="need"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+<condition>xcomp.dependent=nsubj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 103 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/auxpass</type>
+<text>[something] [auxiliary] be set.</text>
+<conditions>
+<condition>aux.governor="set"</condition>
+<condition>aux.governor=auxpass.governor</condition>
+<condition>auxpass.dependent="be"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 104 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj/nsubj/aux</type>
+<text>[something] [auxiliary] have [something].</text>
+<conditions>
+<condition>dobj.governor="have"</condition>
+<condition>dobj.governor=nsubj.governor</condition>
+<condition>nsubj.governor=aux.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 109 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj</type>
+<text>Adds [something].</text>
+<conditions>
+<condition>dobj.governor="add"</condition>
+<condition>dobj.dependent=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 110 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/dobj</type>
+<text>[auxiliary] see [something].</text>
+<conditions>
+<condition>aux.governor="see"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 123 -->
+<NLP_heuristic>
+<sentence type="all"/>
+<type>aux</type>
+<text>[something] [auxiliary] change.</text>
+<conditions>
+<condition>aux.governor="change"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 124 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>prepc_of</type>
+<text>suggestion/idea of [something]</text>
+<conditions>
+<condition>prepc_of.governor="idea suggestion"</condition>
+</conditions>
+<sentence_class>FEATURE REQUEST</sentence_class>
+</NLP_heuristic>
+
+</heuristics>

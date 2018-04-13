@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE heuristics [
+	<!ELEMENT heuristics (NLP_heuristic)*>
+	<!ELEMENT NLP_heuristic (sentence?, type, text, conditions, sentence_class)>
+	<!ELEMENT sentence EMPTY>
+	<!ATTLIST sentence type (declarative|interrogative|all) #REQUIRED>
+	<!ELEMENT type (#PCDATA)>
+	<!ELEMENT text (#PCDATA)>
+	<!ELEMENT conditions (condition)+>
+	<!ELEMENT condition (#PCDATA)>
+	<!ELEMENT sentence_class (#PCDATA)>
+]>  
+
+
+<heuristics>
+
+<!-- id = PD_ASE2015_1 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>[someone] has an issue</text>
+<conditions>
+<condition>nsubj.governor="have"</condition>
+<condition>not:nsubj.governor=neg.governor</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.dependent="issue problem bug error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_2 -->
+<NLP_heuristic>
+<type>nsubj/xcomp/dep/cc/nsubj</type>
+<text>[someone] have tried [verb] but [subj+verb]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>ndubj.governor=xcomp.governor</condition>
+<condition>xcomp.dependent=dep.governor</condition>
+<condition>dep.dependent=cc.governor</condition>
+<condition>cc.dependent="but"</condition>
+<condition>cc.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_3 -->
+<NLP_heuristic>
+<type>nsubj/xcomp/ccomp/cc/nsubj</type>
+<text>[someone] have tried [verb] but [subj+verb]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>ndubj.governor=xcomp.governor</condition>
+<condition>xcomp.dependent=ccomp.governor</condition>
+<condition>ccomp.dependent=cc.governor</condition>
+<condition>cc.dependent="but"</condition>
+<condition>cc.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_4 -->
+<NLP_heuristic>
+<type>nsubj/xcomp/conj</type>
+<text>[someone] have tried [verb] but [subj+verb]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>ndubj.governor=xcomp.governor</condition>
+<condition>xcomp.governor=conj_but.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_5 -->
+<NLP_heuristic>
+<type>nsubj/xcomp/parataxis</type>
+<text>[someone] have tried [verb] but [subj+verb]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>ndubj.governor=xcomp.governor</condition>
+<condition>xcomp.governor=parataxis.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_6 -->
+<NLP_heuristic>
+<type>nsubj/acomp/conj</type>
+<text>[someone] have tried [verb] but [subj+verb]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>ndubj.governor=acomp.governor</condition>
+<condition>acomp.governor=conj_but.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_7 -->
+<NLP_heuristic>
+<type>nsubj/acomp</type>
+<text>[something] goes wobbly</text>
+<conditions>
+<condition>nsubj.governor="go"</condition>
+<condition>ndubj.governor=acomp.governor</condition>
+<condition>acomp.dependent="wobbly"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_8 -->
+<NLP_heuristic>
+<type>nsubj/conj_and/nsubj</type>
+<text>[someone] tried [verb] and discovered [something]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>nsubj.governor=conj_and.governor</condition>
+<condition>conj_and.dependent=nsubj.governor</condition>
+<condition>nsubj.governor="discover"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_9 -->
+<NLP_heuristic>
+<type>nsubj/xcomp</type>
+<text>[something] seems to be an issue</text>
+<conditions>
+<condition>nsubj.governor="seem"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+<condition>xcomp.dependent="issue problem bug error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_10 -->
+<NLP_heuristic>
+<type>nsubj/xcomp/dobj</type>
+<text>[something] seems to have an issue</text>
+<conditions>
+<condition>nsubj.governor="seem"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+<condition>xcomp.dependent="have"</condition>
+<condition>xcomp.dependent=dobj.governor</condition>
+<condition>dobj.dependent="issue problem bug error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_11 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>[someone] gets/catches error [with something]</text>
+<conditions>
+<condition>nsubj.governor="get catch"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.dependent="issue error problem bug"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_12 -->
+<NLP_heuristic>
+<type>nsubj/cop/neg</type>
+<text>[something] isn't [modal] quality</text>
+<conditions>
+<condition>nsubj.governor="quality"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_13 -->
+<NLP_heuristic>
+<type>cop/nsubj/infmod</type>
+<text>An issue to fix is [something]</text>
+<conditions>
+<condition>cop.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="issue problem bug error"</condition>
+<condition>nsubj.dependent=infmod.governor</condition>
+<condition>infmod.dependent="fix"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_14 -->
+<NLP_heuristic>
+<type>cop/nsubj</type>
+<text>it's a mistake/error [something]</text>
+<conditions>
+<condition>cop.governor=nsubj.governor</condition>
+<condition>nsubj.governor="mistake issue problem bug error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_15 -->
+<NLP_heuristic>
+<type>nsubj</type>
+<text>it's a mistake/error [something]</text>
+<conditions>
+<condition>nsubj.governor="be ' 's"</condition>
+<condition>nsubj.dependent="mistake issue problem bug error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_16 -->
+<NLP_heuristic>
+<type>nsubj/cop</type>
+<text>it's a mistake/error [something]</text>
+<conditions>
+<condition>nsubj.dependent="mistake issue problem bug error"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_17 -->
+<NLP_heuristic>
+<type>nsubj/prep_like</type>
+<text>[something] seems like a mistake/error</text>
+<conditions>
+<condition>nsubj.governor="seem"</condition>
+<condition>nsubj.governor=prep_like.governor</condition>
+<condition>prep_like.dependent="problem mistake bug issue error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_18 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>[something] seems a mistake/error</text>
+<conditions>
+<condition>nsubj.governor="seem"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.dependent="problem mistake bug issue error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_19 -->
+<NLP_heuristic>
+<type>nsubj/cop</type>
+<text>[something] is missing</text>
+<conditions>
+<condition>nsubj.governor="miss"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_20 -->
+<NLP_heuristic>
+<type>nsubj/aux</type>
+<text>[something] is missing</text>
+<conditions>
+<condition>nsubj.governor="miss"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_21 -->
+<NLP_heuristic>
+<type>expl/aux/cop</type>
+<text>There may be a problem</text>
+<conditions>
+<condition>expl.governor="problem bug issue error mistake"</condition>
+<condition>expl.dependent="there"</condition>
+<condition>expl.governor=aux.governor</condition>
+<condition>aux.dependent="may might"</condition>
+<condition>aux.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_22 -->
+<NLP_heuristic>
+<type>nsubj</type>
+<text>[something] crashes</text>
+<conditions>
+<condition>nsubj.governor="crash"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_23 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>[something] demonstrates/represents the problem</text>
+<conditions>
+<condition>nsubj.governor="demonstrate represent"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.dependent="problem bug issue error mistake"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_24 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>[something] is unable to [verb]</text>
+<conditions>
+<condition>nsubj.governor="unable"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_25 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>[something] fail</text>
+<conditions>
+<condition>nsubj.governor="fail"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_26 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>issue costs [something]</text>
+<conditions>
+<condition>nsubj.governor="cost"</condition>
+<condition>nsubj.dependent="problem issue bug mistake"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_27 -->
+<NLP_heuristic>
+<type>nsubj/dobj</type>
+<text>Crash/problem/issue/bug happens</text>
+<conditions>
+<condition>nsubj.governor="happen"</condition>
+<condition>nsubj.dependent="crash problem issue bug error mistake"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_28 -->
+<NLP_heuristic>
+<type>nsubj/prep</type>
+<text>Problem is dependent of/to [something]</text>
+<conditions>
+<condition>nsubj.governor="crash problem issue bug error mistake"</condition>
+<condition>nsubj.dependent="dependent independent"</condition>
+<condition>nsubj.governor=prep_to.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_29 -->
+<NLP_heuristic>
+<type>nsubj/prep</type>
+<text>Problem is dependent of/to [something]</text>
+<conditions>
+<condition>nsubj.governor="crash problem issue bug error mistake"</condition>
+<condition>nsubj.dependent="dependent independent"</condition>
+<condition>nsubj.governor=prep_of.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_30 -->
+<NLP_heuristic>
+<type>nsubj/neg</type>
+<text>[something] doesn't work</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_31 -->
+<NLP_heuristic>
+<type>nsubj</type>
+<text>[something] doesn't work</text>
+<conditions>
+<condition>nsubj.governor="non-working"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_32 -->
+<NLP_heuristic>
+<type>csubj/neg</type>
+<text>[something] doesn't work</text>
+<conditions>
+<condition>csubj.governor="work"</condition>
+<condition>csubj.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_33 -->
+<NLP_heuristic>
+<type>nsubj/neg/aux/dobj</type>
+<text>[something] not do [something]</text>
+<conditions>
+<condition>nsubj.governor="do"</condition>
+<condition>nsubj.governor=neg.governor</condition>
+<condition>neg.governor=aux.governor</condition>
+<condition>aux.dependent="ca can do"</condition>
+<condition>aux.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_34 -->
+<NLP_heuristic>
+<type>acomp/conj_negcc</type>
+<text>[something] works fine.... but not [something]</text>
+<conditions>
+<condition>acomp.governor="work"</condition>
+<condition>acomp.dependent="fine nice"</condition>
+<condition>acomp.governor=conj_negcc.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = PD_ASE2015_35 -->
+<NLP_heuristic>
+<type>nsubj</type>
+<text>Problem/issue occurs</text>
+<conditions>
+<condition>nsubj.dependent="issue problem mistake bug"</condition>
+<condition>nsubj.governor="occur"</condition>
+<condition>not:nsubj.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+</heuristics>

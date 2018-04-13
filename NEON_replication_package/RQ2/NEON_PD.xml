@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<heuristics>
+
+<!-- id = 1 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop/prep_in</type>
+<text>Integration in [somehing] is problem</text>
+<conditions>
+<condition>nsubj.governor="integration"</condition>
+<condition>nsubj.dependent="problem"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+<condition>cop.governor=prep_in.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+
+<!-- id = 5 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop/nsubj</type>
+<text>Problem is integration/default.</text>
+<conditions>
+<condition>nsubj.governor="integration default"</condition>
+<condition>nsubj.dependent="problem"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+<condition>cop.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 7 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/cop</type>
+<text>[something] [auxiliary] be a problem.</text>
+<conditions>
+<condition>aux.governor="problem"</condition>
+<condition>aux.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 8 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/xcomp</type>
+<text>I try to [verb]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 9 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>xcomp/aux/nsubj/neg/xcomp</type>
+<text>[something] do not seem to [verb]</text>
+<conditions>
+<condition>xcomp.governor="seem"</condition>
+<condition>xcomp.governor=aux.governor</condition>
+<condition>aux.dependent="do"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+<condition>neg.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 11 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/neg</type>
+<text>It won't work.</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.dependent="it"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="wo"</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 12 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>cop</type>
+<text>[something] is problem.</text>
+<conditions>
+<condition>cop.governor="problem"</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+
+<!-- id = 15 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/nsubj</type>
+<text>I am trying.</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="be"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 16 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/xcomp</type>
+<text>I am trying to [verb]</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="be"</condition>
+<condition>aux.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 17 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/neg</type>
+<text>[something] do not seem/appear.</text>
+<conditions>
+<condition>nsubj.governor="seem appear"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="do"</condition>
+<condition>aux.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 18 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>neg/aux/nsubj</type>
+<text>[something] won't work.</text>
+<conditions>
+<condition>neg.governor="work"</condition>
+<condition>neg.dependent="n't"</condition>
+<condition>neg.governor=aux.governor</condition>
+<condition>aux.dependent="wo"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 19 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj</type>
+<text>[something] fails.</text>
+<conditions>
+<condition>nsubj.governor="fail"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 21 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>prep_for/nsubj/aux/neg</type>
+<text>[something] won't work for app</text>
+<conditions>
+<condition>prep_for.governor="work"</condition>
+<condition>prep_for.dependent="app"</condition>
+<condition>prep_for.governor=nsubj.governor</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="wo"</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 23 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>ccomp/nsubj</type>
+<text>problem is to [verb]</text>
+<conditions>
+<condition>ccomp.governor="be"</condition>
+<condition>ccomp.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="problem"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 24 -->
+<NLP_heuristic>
+<sentence type="all"/>
+<type>nsubj/cop</type>
+<text>[something] is issue.</text>
+<conditions>
+<condition>nsubj.governor="issue"</condition>
+<condition>nsubj.dependent=nsubj.governor</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 25 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/acomp</type>
+<text>[something] works [somehow].</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=acomp.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 29 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/neg</type>
+<text>[something] [auxiliary] not work.</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 30 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>neg/aux/nsubj</type>
+<text>[something] [auxiliary] not work.</text>
+<conditions>
+<condition>neg.governor="work"</condition>
+<condition>neg.dependent="n't"</condition>
+<condition>neg.governor=aux.governor</condition>
+<condition>aux.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 35 -->
+<NLP_heuristic>
+<sentence type="all"/>
+<type>cop</type>
+<text>[something] is issue.</text>
+<conditions>
+<condition>cop.governor="issue"</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 37 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/neg</type>
+<text>[something] [auxiliary] not work.</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="not"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 38 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/neg</type>
+<text>[something] do not work.</text>
+<conditions>
+<condition>aux.governor="work"</condition>
+<condition>aux.dependent="do"</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 41 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/neg/aux/nsubj</type>
+<text>[something] does not like/make [something].</text>
+<conditions>
+<condition>aux.governor="make like"</condition>
+<condition>aux.dependent="do"</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+<condition>neg.governor=aux.governor</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.dependent=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 45 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>prep_in/aux/nsubj/neg</type>
+<text>[something] does not seem/appear in [something]</text>
+<conditions>
+<condition>prep_in.governor="seem appear"</condition>
+<condition>prep_in.governor=aux.governor</condition>
+<condition>aux.dependent="do"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 46 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/ccomp</type>
+<text>Issue is that [verb]</text>
+<conditions>
+<condition>nsubj.governor="be"</condition>
+<condition>nsubj.dependent="issue"</condition>
+<condition>nsubj.governor=ccomp.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 47 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj</type>
+<text>[something] fails.</text>
+<conditions>
+<condition>nsubj.governor="fail"</condition>
+<condition>nsubj.dependent=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 49 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/neg/aux/nsubj</type>
+<text>[something] does not do/make.</text>
+<conditions>
+<condition>aux.governor="make do"</condition>
+<condition>aux.dependent="do"</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+<condition>neg.governor=aux.governor</condition>
+<condition>aux.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 50 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>neg/nsubj</type>
+<text>[something] does not do/make.</text>
+<conditions>
+<condition>neg.governor="make do"</condition>
+<condition>neg.dependent="n't"</condition>
+<condition>neg.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 51 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/neg</type>
+<text>[something] doesn't do.</text>
+<conditions>
+<condition>nsubj.governor="do"</condition>
+<condition>nsubj.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 53  -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj/nsubj/aux/neg</type>
+<text>use [something] and [auxiliary] not work.</text>
+<conditions>
+<condition>dobj.governor="use"</condition>
+<condition>dobj.dependent=nsubj.dependent</condition>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 54 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/neg</type>
+<text>[something] does not work.</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="do"</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.dependent="n't"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 55 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>prep_of/nsubj/cop</type>
+<text>couple of [something] is missing.</text>
+<conditions>
+<condition>prep_of.governor="couple"</condition>
+<condition>prep_of.governor=nsubj.dependent</condition>
+<condition>nsubj.governor="miss"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 56 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/ccomp/nsubj</type>
+<text>Problem is that [verb]</text>
+<conditions>
+<condition>nsubj.governor="be"</condition>
+<condition>nsubj.dependent="problem"</condition>
+<condition>nsubj.governor=ccomp.governor</condition>
+<condition>ccomp.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 57 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/ccomp</type>
+<text>[something] that is available is missing.</text>
+<conditions>
+<condition>nsubj.governor="miss"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.dependent="be"</condition>
+<condition>aux.governor=ccomp.governor</condition>
+<condition>ccomp.dependent="available"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 58 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/aux/neg/prep_in</type>
+<text>[something] [auxiliary] not work in [something]</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=aux.governor</condition>
+<condition>aux.governor=neg.governor</condition>
+<condition>neg.governor=prep_in.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 60 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj</type>
+<text>I try [something].</text>
+<conditions>
+<condition>nsubj.governor="try"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 62 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/dobj</type>
+<text>I get error.</text>
+<conditions>
+<condition>nsubj.governor="get"</condition>
+<condition>nsubj.dependent="i"</condition>
+<condition>nsubj.governor=dobj.governor</condition>
+<condition>dobj.dependent="error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 63 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>dobj</type>
+<text>[something] gets error.</text>
+<conditions>
+<condition>dobj.governor="get"</condition>
+<condition>dobj.dependent="error"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 65 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop</type>
+<text>[something] is problem.</text>
+<conditions>
+<condition>nsubj.governor="problem"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 70 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop/nsubj</type>
+<text>[something] is problem.</text>
+<conditions>
+<condition>nsubj.governor="problem"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+<condition>cop.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 71 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>prep_on/aux/cop</type>
+<text>[auxiliary] be a problem on [something].</text>
+<conditions>
+<condition>prep_on.governor="problem"</condition>
+<condition>prep_on.governor=aux.governor</condition>
+<condition>aux.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 73 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>neg/aux/prep_in/nsubj</type>
+<text>[something] [auxiliary] not work in [something].</text>
+<conditions>
+<condition>neg.governor="work"</condition>
+<condition>neg.governor=aux.governor</condition>
+<condition>aux.governor=prep_in.governor</condition>
+<condition>prep_in.governor=nsubj.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 74 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/neg</type>
+<text>[something] not work.</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 79 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj</type>
+<text>[something] crashes.</text>
+<conditions>
+<condition>nsubj.governor="crash"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 80 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop</type>
+<text>[something] 's bug.</text>
+<conditions>
+<condition>nsubj.governor="bug"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="'"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 81 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop/prep_on</type>
+<text>[something] is the default/case on [something]</text>
+<conditions>
+<condition>nsubj.governor="case default"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.governor=prep_on.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 82 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop/prep_in</type>
+<text>[something] is a bug in [something].</text>
+<conditions>
+<condition>nsubj.governor="bug"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.governor=prep_in.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 83 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/xcomp</type>
+<text>Crash seems to [verb]</text>
+<conditions>
+<condition>nsubj.governor="seem"</condition>
+<condition>nsubj.dependent="crash"</condition>
+<condition>nsubj.governor=xcomp.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 86 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop</type>
+<text>It is bug.</text>
+<conditions>
+<condition>nsubj.governor="bug"</condition>
+<condition>nsubj.dependent="it"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 88 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/cop</type>
+<text>[something] is bug.</text>
+<conditions>
+<condition>nsubj.governor="bug"</condition>
+<condition>nsubj.governor=cop.governor</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 89 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>aux/nsubj</type>
+<text>it [auxiliary] work</text>
+<conditions>
+<condition>aux.governor="work"</condition>
+<condition>aux.governor=nsubj.governor</condition>
+<condition>nsubj.dependent="it"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 90 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/prep_in/neg</type>
+<text>[something] not work in [something]</text>
+<conditions>
+<condition>nsubj.governor="work"</condition>
+<condition>nsubj.governor=prep_in.governor</condition>
+<condition>prep_in.governor=neg.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 95 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>neg</type>
+<text>[something] not support</text>
+<conditions>
+<condition>neg.governor="support"</condition>
+<condition>neg.dependent="not"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 97 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>cop</type>
+<text>[something] is error</text>
+<conditions>
+<condition>cop.governor="error default"</condition>
+<condition>cop.dependent="be"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 98 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj/prep_with</type>
+<text>[something] occurs/happens with [something]</text>
+<conditions>
+<condition>nsubj.governor="happen occur"</condition>
+<condition>nsubj.governor=prep_with.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 101 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>neg/prep_in</type>
+<text>not work in [something]</text>
+<conditions>
+<condition>neg.governor="work"</condition>
+<condition>neg.governor=prep_in.governor</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 103 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>nsubj</type>
+<text>[something] happens/occurs.</text>
+<conditions>
+<condition>nsubj.governor="occur happen"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+<!-- id = 110 -->
+<NLP_heuristic>
+<sentence type="declarative"/>
+<type>prep_in</type>
+<text>fails in [something]</text>
+<conditions>
+<condition>prep_in.governor="fail"</condition>
+</conditions>
+<sentence_class>PROBLEM DISCOVERY</sentence_class>
+</NLP_heuristic>
+
+</heuristics>
