@@ -33,8 +33,8 @@ Description of the content of folder "NEON_replication_package":
    
    b) "RQ3_results.xlsx" containing the results obtained for answering RQ3.
    
-   c) the folder "TOPIC1_heuristics", containing the xml files with the NLP heuristics extracted from the issue titles with 
+   c) the folder "BUG_heuristics", containing the xml files with the NLP heuristics extracted from the issue titles with 
       labels belonging to the "bug" issue type related to each of the selected projects for this issue type.
       
-   d) the folder "TOPIC2_heuristics", containing the xml files with the NLP heuristics extracted from the issue titles with 
+   d) the folder "ENHANCEMENT_heuristics", containing the xml files with the NLP heuristics extracted from the issue titles with 
       labels belonging to the "enhancement" issue type related to each of the selected projects for this issue type.
