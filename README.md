@@ -43,7 +43,7 @@ Description of the content of folder "NEON_replication_package":
    
    a) "issues.csv" containing the collected issue titles.   
    
-   b) "RQ3_results.xlsx" containing the results obtained for answering RQ3.
+   b) "RQ3_results.xlsx" containing the results obtained for answering RQ4.
    
    c) the folder "BUG_heuristics", containing the xml files with the NLP heuristics extracted from the issue titles with 
       labels belonging to the "bug" issue type related to each of the selected projects for this issue type.
