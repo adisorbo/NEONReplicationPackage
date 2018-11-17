@@ -39,7 +39,7 @@ Description of the content of folder "NEON_replication_package":
    
    h) "trainingSetWeka.arff" and "testSetWeka.arff" to replicate the results obtained with machine learning classifiers.
    
-3) the folder "RQ3" contains:
+3) the folder "RQ4" contains:
    
    a) "issues.csv" containing the collected issue titles.   
    
