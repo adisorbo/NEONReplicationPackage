@@ -4,8 +4,20 @@ Description of the content of folder "NEON_replication_package":
 1) the folder "RQ1" contains:
    
    a) "RQ1_results.xlsx" which contains the tasks descriptions and the answers collected from our study's participants.
-   
+
 2) the folder "RQ2" contains:
+  
+   a) "classification_results.xlsx" which contains the detailed classification results achieved by each study subject
+   
+   b) "subject1_patterns.xml" containing the NLP heuristics identified by Subject 1 with the support of NEON
+   
+   c) "subject2_patterns.xml" containing the NLP heuristics identified by Subject 2 with the support of NEON
+   
+   d) "subject3_patterns.xml" containing the NLP heuristics identified by Subject 3 manually
+   
+   e) "subject4_patterns.xml" containing the NLP heuristics identified by Subject 4 manually
+
+2) the folder "RQ3" contains:
    
    a) "ASE2015_FR.xml" containing the xml versions of NLP heuristics related to the FEATURE REQUEST category identified 
       in our previous work "Development Emails Content Analyzer: Intention Mining in Developer Discussions". 
