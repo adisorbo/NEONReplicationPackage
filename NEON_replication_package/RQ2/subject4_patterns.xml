@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<heuristics>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/dobj</type>
+     <text>[something] needs improvements</text>
+     <conditions>
+          <condition>nsubj.governor="need require"</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent="improvement betterment"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/cop/nsubj/advcl/mark</type>
+     <text>[something] could be better if [something]</text>
+     <conditions>
+          <condition>nsubj.governor="better best top nice pleasant enjoyable cool"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="could may can might would"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=cop.governor</condition>
+          <condition>cop.dependent="be become get"</condition>
+          <condition>cop.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=advcl.governor</condition>
+          <condition>advcl.dependent=mark.governor</condition>
+          <condition>mark.dependent="if"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/dobj/amod</type>
+     <text>[something] need better [something]</text>
+     <conditions>
+          <condition>nsubj.governor="need require"</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent=amod.governor</condition>
+          <condition>amod.dependent="better best top"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/cop/nsubj/xcomp</type>
+     <text>[something] would be nice to have [something]</text>
+     <conditions>
+          <condition>nsubj.governor="nice pleasant enjoyable"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="would could should"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=cop.governor</condition>
+          <condition>cop.dependent="be become get"</condition>
+          <condition>cop.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent="have get own possess"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux</type>
+     <text>[something] can correct [something]</text>
+     <conditions>
+          <condition>nsubj.governor="correct"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="can must may"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/xcomp/aux</type>
+     <text>[something] might help to [something]</text>
+     <conditions>
+          <condition>nsubj.governor="help aid support"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="can must may might could"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent=aux.governor</condition>
+          <condition>aux.dependent="to"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>xcompl</type>
+     <text>please add [something]!</text>
+     <conditions>
+          <condition>xcompl.governor="please kindly"</condition>
+          <condition>xcompl.dependent="add insert expand append"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/ccomp/nsubj/rcmod/aux</type>
+     <text>[something] wish there is [something] could [something] </text>
+     <conditions>
+          <condition>nsubj.governor="wish want desire will fancy"</condition>
+          <condition>nsubj.governor=ccomp.governor</condition>
+          <condition>ccomp.dependent="be"</condition>
+          <condition>ccomp.dependent=nsubj.governor</condition>
+          <condition>nsubj.dependent=rcmod.governor</condition>
+          <condition>rcmod.dependent=aux.governor</condition>
+          <condition>aux.dependent="would could should might"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux</type>
+     <text>[something] should have [something] </text>
+     <conditions>
+          <condition>nsubj.governor="have get own see obtain"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="would could should might should"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/xcomp</type>
+     <text>[something] would like to see [something] </text>
+     <conditions>
+          <condition>nsubj.governor="like enjoy"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="would could should might should"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent="have get own see obtain"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>discourse</type>
+     <text>please find [something]!</text>
+     <conditions>
+          <condition>discourse.governor="Please please kindly"</condition>
+          <condition>discourse.dependent="add insert expand append find correct"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/rcmod/nsubj</type>
+     <text>the way [something] think is to [something]</text>
+     <conditions>
+          <condition>nsubj.governor="think consider deduce deduct"</condition>
+          <condition>nsubj.governor=rcmod.dependent</condition>
+          <condition>rcmod.governor="way modality"</condition>
+          <condition>rcmod.governor=nsubj.dependent</condition>
+          <condition>nsubj.governor="be"</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/dobj/vmod/aux</type>
+     <text>[something] needs a way to [something]</text>
+     <conditions>
+          <condition>nsubj.governor="need require"</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent="way modality"</condition>
+          <condition>dobj.dependent=vmod.governor</condition>
+          <condition>vmod.dependent=aux.governor</condition>
+           <condition>aux.dependent="to"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>csubj/xcomp</type>
+     <text>[something] needs to add[something]</text>
+     <conditions>
+          <condition>csubj.governor="need require"</condition>
+          <condition>csubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependen="put add do expand get"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/xcomp</type>
+     <text>[something] needs to add[something]</text>
+     <conditions>
+          <condition>nsubj.governor="need require"</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent="put add do expand get"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/prep/pobj/prep</type>
+     <text>[something] crashes of [something]</text>
+     <conditions>
+     	  <condition>nsubj.dependent=prep.governor</condition>
+     	  <condition>prep.dependent=pobj.governor</condition>
+          <condition>pobj.dependent="problem crash failure abortion"</condition>
+          <condition>pobj.dependent=prep.governor</condition>
+          <condition>prep.dependent="of in into"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/ccomp/expl</type>
+     <text>[something] wish there is [something]</text>
+     <conditions>
+          <condition>nsubj.governor="wish want desire will fancy"</condition>
+          <condition>nsubj.governor=ccomp.governor</condition>
+          <condition>ccomp.dependent="be"</condition>
+          <condition>ccomp.dependent=expl.governor</condition>
+          <condition>expl.dependent="there"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/auxpass</type>
+     <text>[something] should be [something]</text>
+     <conditions>
+          <condition>nsubjpass.governor=aux.governor</condition>
+          <condition>aux.dependent="would could should might should"</condition>
+          <condition>aux.governor=auxpass.governor</condition>
+          <condition>auxpass.dependent="be"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux</type>
+     <text>[something] don't like [something]</text>
+     <conditions>
+          <condition>nsubj.governor="like appreciate care"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=neg.governor</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/cop</type>
+     <text>some features are missing [something]</text>
+     <conditions>
+          <condition>nsubj.governor="miss need omit"</condition>
+          <condition>nsubj.dependent="feature"</condition>
+          <condition>nsubj.governor=cop.governor</condition>
+          <condition>cop.dependent="be"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj</type>
+     <text>[something] can't do [something]</text>
+     <conditions>
+          <condition>nsubj.governor="do search categorize tap open"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=neg.governor</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/advmod</type>
+     <text>[something] needs [something] more</text>
+     <conditions>
+          <condition>nsubj.governor="need require"</condition>
+          <condition>nsubj.governor=advmod.governor</condition>
+          <condition>advmod.dependent="more"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>prt/dobj</type>
+     <text>[something] take off [something] update</text>
+     <conditions>
+          <condition>prt.governor="take remove"</condition>
+          <condition>prt.dependent="away off"</condition>
+          <condition>prt.governor=dobj.governor</condition>
+          <condition>dobj.dependent="update"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/dobj/amod</type>
+     <text>[something] like more [something]</text>
+     <conditions>
+          <condition>nsubj.governor="wish want desire will fancy like"</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent=amod.governor</condition>
+           <condition>amod.dependent="more"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/cop</type>
+     <text>[something] update is worse [something]</text>
+     <conditions>
+          <condition>nsubj.governor="worse bad wrong"</condition>
+          <condition>nsubj.dependent="update"</condition>
+          <condition>nsubj.governor=cop.governor</condition>
+           <condition>cop.dependent="be"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>cop/advmod</type>
+     <text>[something] is annoying</text>
+     <conditions>
+          <condition>cop.governor="annoying troublesome boring tedious"</condition>
+          <condition>cop.dependent="be"</condition>
+          <condition>cop.governor=advmod.governor</condition>
+          <condition>advmod.dependent="much very so"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/xcomp/aux</type>
+     <text>[something] like to see [something]</text>
+     <conditions>
+          <condition>nsubj.governor="wish want desire will fancy like"</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent="have get own see obtain use"</condition>
+          <condition>xcomp.dependent=aux.governor</condition>
+          <condition>aux.dependent="to"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>pcomp/dobj/num/mwe</type>
+     <text>[something] adding more [something]</text>
+     <conditions>
+          <condition>pcomp.dependent="put add do expand get"</condition>
+          <condition>pcomp.dependent=dobj.governor</condition>
+          <condition>dobj.dependent=num.governor</condition>
+          <condition>num.dependent=mwe.governor</condition>
+          <condition>mwe.dependent="more"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj</type>
+     <text>[something] suggest [something]</text>
+     <conditions>
+          <condition>nsubj.governor="suggest hint propose offer"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/nn/nsubj/advmod/nsubj/dobj/cc/mwe</type>
+     <text>why not use [something] update [something] rather than [something]</text>
+     <conditions>
+     	  <condition>nsubj.governor="update"</condition>
+          <condition>nsubj.dependent=nn.governor</condition>
+          <condition>nn.dependent="use put add do expand get"</condition>
+          <condition>nn.governor=nsubj.dependent</condition>
+          <condition>nsubj.governor=advmod.governor</condition>
+          <condition>advmod.dependent="not"</condition>
+          <condition>advmod.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent=cc.governor</condition>
+          <condition>cc.dependent="rather"</condition>
+          <condition>cc.dependent=mwe.governor</condition>
+          <condition>mwe.dependent="than"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>dep</type>
+     <text>[something] fix [something]</text>
+     <conditions>
+          <condition>dep.governor="fix adjust"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/dobj/prep_with/mark/dobj</type>
+     <text>[something] wish that [something] fix the crashing [something]</text>
+     <conditions>
+          <condition>nsubj.governor="wish want desire will fancy like"</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent="that"</condition>
+          <condition>dobj.dependent=prep_with.governor</condition>
+          <condition>prep_with.governor=mark.dependent</condition>
+          <condition>mark.governor="fix correct adjust"</condition>
+          <condition>mark.governor=dobj.governor</condition>
+          <condition>dobj.dependent="crashing"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj</type>
+     <text>The problems [something] is [something]</text>
+     <conditions>
+          <condition>nsubj.governor="be"</condition>
+          <condition>nsubj.governor="problem crash failure abortion"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/prep</type>
+     <text>[something] none of [something] came right [something]</text>
+     <conditions>
+          <condition>nsubj.governor="come be"</condition>
+          <condition>nsubj.dependent="none"</condition>
+          <condition>nsubj.dependent=prep.governor</condition>
+          <condition>prep.dependent="of"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/neg/nsubj/prep</type>
+     <text>[something] are not working on [something]</text>
+     <conditions>
+          <condition>nsubj.governor="work run"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="be"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=neg.governor</condition>
+          <condition>neg.dependent="not"</condition>
+          <condition>neg.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=prep.governor</condition>
+          <condition>prep.dependent="on in"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux</type>
+     <text>[something] does crash [something]</text>
+     <conditions>
+          <condition>nsubj.governor="crash"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="do"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/dobj</type>
+     <text>[something] may have a [something] problem [something]</text>
+     <conditions>
+          <condition>nsubj.governor="have"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="may could"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent="problem crash"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/advmod</type>
+     <text>[something] crashes </text>
+     <conditions>
+          <condition>nsubj.governor="crash fail"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/dobj</type>
+     <text>[something] have issues [something]</text>
+     <conditions>
+          <condition>nsubj.governor="have"</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent="issue problem"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/dep/aux/mark</type>
+     <text>[something] problem that [something] have noticed is [something]</text>
+     <conditions>
+          <condition>nsubj.governor="be"</condition>
+          <condition>nsubj.dependent="problem issue crash"</condition>
+          <condition>nsubj.dependent=dep.governor</condition>
+          <condition>dep.dependent="notice see"</condition>
+          <condition>dep.dependent=aux.governor</condition>
+          <condition>aux.dependent="have"</condition>
+          <condition>aux.governor=mark.governor</condition>
+          <condition>mark.dependent="that"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj</type>
+     <text>please correct [something] defect</text>
+     <conditions>
+          <condition>nsubj.governor="add insert expand append find correct"</condition>
+          <condition>nsubj.dependent="problem defect issue"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/dobj/prep/pobj</type>
+     <text>[something] can use [something] improvements [something]</text>
+     <conditions>
+          <condition>nsubj.governor="use add"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="can must could should may"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent=prep.governor</condition>
+          <condition>prep.dependent=pobj.governor</condition>
+          <condition>pobj.dependent="improvement betterment"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/nsubj/neg</type>
+     <text>[something] does not worked [something]</text>
+     <conditions>
+          <condition>nsubj.governor="work run"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="have do"</condition>
+          <condition>aux.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=neg.governor</condition>
+          <condition>neg.dependent="not"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<!--misspelling: "its" instead of "it"-->
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>poss</type>
+     <text>[something] needs improvements</text>
+     <conditions>
+          <condition>poss.governor="need require"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>csubj</type>
+     <text>[something] broke [something]</text>
+     <conditions>
+          <condition>csubj.governor="break"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/cop/nsubj</type>
+     <text>[something] aren't upgradeable [something]</text>
+     <conditions>
+          <condition>nsubj.governor="upgradeable"</condition>
+          <condition>nsubj.governor=cop.governor</condition>
+          <condition>cop.dependent="be"</condition>
+          <condition>cop.governor=nsubj.governor</condition>
+          <condition>nsubj.governor=neg.governor</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubjpass/aux/nsubjpass/auxpass</type>
+     <text>No update has been done [something]</text>
+     <conditions>
+          <condition>nsubjpass.governor="do"</condition>
+          <condition>nsubjpass.dependent="update upgrade"</condition>
+          <condition>nsubjpass.governor=aux.governor</condition>
+          <condition>aux.dependent="have"</condition>
+          <condition>aux.governor=nsubjpass.governor</condition>
+          <condition>nsubjpass.governor=auxpass.governor</condition>
+          <condition>auxpass.dependent="be"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/cop/xcomp/aux</type>
+     <text>[something] was unable to complete [something]</text>
+     <conditions>
+          <condition>nsubj.governor="unable"</condition>
+          <condition>nsubj.governor=cop.governor</condition>
+          <condition>cop.dependent="be"</condition>
+          <condition>cop.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent="complete"</condition>
+          <condition>xcomp.dependent=aux.governor</condition>
+          <condition>aux.dependent="to"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/advmod/xcomp/prt</type>
+     <text>[something] takes forever to show up [something]</text>
+     <conditions>
+          <condition>nsubj.governor="take"</condition>
+          <condition>nsubj.governor=advmod.governor</condition>
+          <condition>advmod.dependent="forever"</condition>
+          <condition>advmod.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent="show"</condition>
+          <condition>xcomp.dependent=prt.governor</condition>
+          <condition>prt.dependent="up"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>dobj</type>
+     <text>[something] have trouble [something]</text>
+     <conditions>
+          <condition>nsubj.governor="have"</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent="trouble problem failure"</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/advmod/ccomp/aux</type>
+     <text>[something] problem is sometimes [something] don't get [something]</text>
+     <conditions>
+          <condition>nsubj.governor="be"</condition>
+          <condition>nsubj.dependent="problem issue failure crash"</condition>
+          <condition>nsubj.governor=advmod.governor</condition>
+          <condition>advmod.dependent="sometime often occasionally"</condition>
+          <condition>advmod.governor=ccomp.governor</condition>
+          <condition>ccomp.dependent="get"</condition>
+          <condition>ccomp.dependent=aux.governor</condition>
+          <condition>aux.dependent="do"</condition>
+          <condition>aux.governor=neg.governor</condition>
+     </conditions>
+     <sentence_class>problem discovery</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/aux/dep/prep</type>
+     <text>[something] would love added to [something]</text>
+     <conditions>
+          <condition>nsubj.governor="love like"</condition>
+          <condition>nsubj.governor=aux.governor</condition>
+          <condition>aux.dependent="would could should"</condition>
+          <condition>aux.governor=dep.governor</condition>
+          <condition>dep.dependent="add"</condition>
+          <condition>dep.dependent=prep.governor</condition>
+          <condition>prep.dependent="to"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/xcomp/aux/cop</type>
+     <text>[something] need [something] to be [something]</text>
+     <conditions>
+          <condition>nsubj.governor="need"</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent=aux.governor</condition>
+          <condition>aux.dependent="to"</condition>
+          <condition>aux.governor=cop.governor</condition>
+          <condition>cop.dependent="be"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/rcmod/ccomp/aux</type>
+     <text>[something] is [something] way that [something] can do [something]</text>
+     <conditions>
+          <condition>nsubj.governor="be"</condition>
+          <condition>nsubj.dependent="way"</condition>
+          <condition>nsubj.dependent=rcmod.governor</condition>
+          <condition>rcmod.dependent=ccomp.governor</condition>
+          <condition>ccomp.dependent="do put"</condition>
+          <condition>ccomp.dependent=aux.governor</condition>
+          <condition>aux.dependent="can"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/prep/nsubj/dobj</type>
+     <text>[something] except [something] support it</text>
+     <conditions>
+          <condition>nsubj.governor="support"</condition>
+          <condition>nsubj.dependent=prep.governor</condition>
+          <condition>prep.dependent="except"</condition>
+          <condition>prep.governor=nsubj.dependent</condition>
+          <condition>nsubj.governor=dobj.governor</condition>
+          <condition>dobj.dependent="it"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+<NLP_heuristic>
+     <sentence type="declarative"/>
+     <type>nsubj/xcomp</type>
+     <text>[something] like have [something]</text>
+     <conditions>
+          <condition>nsubj.governor="like"</condition>
+          <condition>nsubj.governor=xcomp.governor</condition>
+          <condition>xcomp.dependent="have"</condition>
+     </conditions>
+     <sentence_class>feature request</sentence_class>
+</NLP_heuristic>
+
+</heuristics>
