@@ -33,9 +33,9 @@ Description of the content of folder "NEON_replication_package":
    e) "NEON_PD.xml" containing the heuristics related to the PROBLEM DISCOVERY category, which have been automatically extracted 
       with the NEON approach and manually selected by researchers.      
    
-   f) "RQ2a_results.xlsx" containing the results obtained by the NEON-extracted heuristics in classifying development email messages
+   f) "RQ3a_results.xlsx" containing the results obtained by the NEON-extracted heuristics in classifying development email messages
    
-   g) "RQ2b_results.xlsx" containing the results of the comparisons between the NEON-extracted and manually identified heuristics.
+   g) "RQ3b_results.xlsx" containing the results of the comparisons between the NEON-extracted and manually identified heuristics.
    
    h) "trainingSetWeka.arff" and "testSetWeka.arff" to replicate the results obtained with machine learning classifiers.
    
@@ -43,7 +43,7 @@ Description of the content of folder "NEON_replication_package":
    
    a) "issues.csv" containing the collected issue titles.   
    
-   b) "RQ3_results.xlsx" containing the results obtained for answering RQ4.
+   b) "RQ4_results.xlsx" containing the results obtained for answering RQ4.
    
    c) the folder "BUG_heuristics", containing the xml files with the NLP heuristics extracted from the issue titles with 
       labels belonging to the "bug" issue type related to each of the selected projects for this issue type.
